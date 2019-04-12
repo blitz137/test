@@ -1,9 +1,93 @@
+
+@-ms-viewport {
+  width: device-width;
+}
+
 div{
 	display: flex;
 	flex-direction: column;
 }
+#ourP{
+	margin: auto;
+	color: #f85452;
+	margin-bottom: 20px;
 
+}
 img{
+margin:0;
+
 	max-height: 200px;
-	max-width: 200px;
+	max-width: 250px;
+}
+.home #bigT{
+	color:#2da296;
+}
+.home h2{
+
+	color:#56bbdb;
+}
+.home {
+	border :solid purple 2px;
+
+	display:flex;
+	flex-direction: row;
+	max-height: 200px;
+	width: 90%;
+	max-width: 90%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+
+.home div{
+	margin: 0 20px;
+}
+.home div h1{
+	font-size: 20px;
+	margin: 10px 0 7px 0;
+	text-transform: uppercase;
+}
+.home div h2{
+	font-size: 15px;
+	margin:  0;
+	text-transform: uppercase;
+}
+.home div p{
+	margin: 5px 0;
+}
+
+.home .but{
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	width: 100%;
+	align-self:  flex-end;
+
+}
+.but button{
+	margin:0 10px 0 0;
+	justify-content: flex-start;
+	background-color:#2da296;
+	border: none;
+	color:white;
+	text-transform: uppercase;
+}
+@media screen and (max-width: 1150px) {
+	.home{
+
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	align-items: center;
+	}
+.home img{
+	margin: auto;
+	max-width: 100%;
+}
+.home div{
+
+	max-width: 250px;
+	margin: 10px;
+}
+
 }

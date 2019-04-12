@@ -1,17 +1,16 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby";
 
-
-const HomePage = () => (
+const Test = () => (
 
  <StaticQuery
     query={graphql`
-      query HomePage {
-     
-         contentfulHomePage(contentful_id:{eq:"1dIA49AE5EQNGmSJrfRkpV"}){
-          title
-          date
-          content {
+         query Test {
+        
+         contentfulHomePage(contentful_id:{eq:"3cByvheRf2sP4asouTddqS"}){
+      
+        title,
+         content {
             content
           }
           image {
@@ -19,25 +18,34 @@ const HomePage = () => (
               url
             }
           }
+          
         }
-      }
+        
+  }
+  
+      
+    
     `}
     render={({
         
-      contentfulHomePage: {
+       contentfulHomePage:{
+      
         title,
-        date,
-        content: { content },
+         content: { content },
         image: {
           file: { url }
         }
       }
-    }) => (
+        }
+        
+  
+  
+   ) => (
       <>
-      <div class= "home">
+         <div class= "home">
        <img src={url} />
        <div>
-      <h1 id="bigT">Current Focus Project</h1>
+      <h1 id="bigT">Second Focus Project</h1>
         <h2>{title}</h2>
               
        
@@ -48,11 +56,11 @@ const HomePage = () => (
         </div>
 
         </div>
-        </div>
+        </div>       
       </>
     )}
   />
 
 );
 
-export default HomePage;
+export default Test;
