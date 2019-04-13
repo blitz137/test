@@ -1,0 +1,241 @@
+
+@-ms-viewport {
+  width: device-width;
+}
+
+body{
+	margin: 0;
+}
+
+nav{
+
+	width: 90%;
+	max-width: 90%;
+	min-width: 90%;
+	margin: auto;
+	margin-top: 50px;
+
+	.nav{
+		margin:20px 0;
+		height: 50px;
+		align-items: flex-end;
+		flex-direction: row;
+		justify-content: flex-end;
+
+		a{
+			margin: 0 10px; 
+			text-decoration: none;
+			color: black;
+			
+			&#donate{
+				background-color: #56bbdb;
+				color: white;
+				font-size: 30px;
+				padding: 5px;
+				text-transform: uppercase;
+				text-height: 1em;
+			}
+		}
+	}
+	
+	.logo {
+		margin:20px 0;
+		max-width: 200px;
+		min-width: 200px;
+	  	display: inline-block;
+	  	float: left;
+	}
+
+}
+
+
+.redBanner{
+	align-self: flex-end;
+	background-color: #f85452;
+	height: 30px;
+	width: 70%;
+	margin: 0;
+	position: absolute;
+	margin-top: 130px;
+}
+
+
+
+
+footer{
+	
+	background-color: #525252;
+	color: white;
+	
+	div{
+		width: 90%;
+		margin:  20px 5%;
+		flex-direction: row;
+		display: flex;
+		justify-content: space-between;
+		
+		div{
+			
+			width: 100%;
+			flex-direction: column;
+			display: flex;
+			justify-content: flex-start;
+
+			p{
+				width: 200%;
+				margin: 2.5px 0;
+			}
+
+			a{
+				width: 200%;
+				text-decoration: none;
+				color: white;
+			}
+		}
+	}
+}
+
+
+
+div{
+	display: flex;
+	flex-direction: column;
+}
+#ourP{
+	margin: auto;
+	color: #f85452;
+	margin-bottom: 20px;
+
+}
+.img{
+margin:0;
+
+	max-height: 200px;
+	max-width: 250px;
+}
+
+.home {
+ 
+ 	border :solid purple 2px;
+	display:flex;
+	flex-direction: row;
+	max-height: 200px;
+	width: 90%;
+	max-width: 90%;
+	margin: auto;
+	margin-bottom: 20px;
+ 	
+ 	#bigT{
+		color:#2da296;
+	}
+
+ 	h2{
+		color:#56bbdb;
+	}
+	
+ 	div{
+		margin: 0 20px;
+		
+		 h1{
+			font-size: 20px;
+			margin: 10px 0 7px 0;
+			text-transform: uppercase;
+		}
+		
+		h2{
+			font-size: 15px;
+			margin:  0;
+			text-transform: uppercase;
+		}
+		
+		p{
+			margin: 5px 0;
+		}
+	}
+
+	.but{
+		display: flex;
+		flex-direction: row;
+		margin: 0;
+		width: 100%;
+		align-self:  flex-end;
+			
+		button{
+			margin:0 10px 0 0;
+			justify-content: flex-start;
+			background-color:#2da296;
+			border: none;
+			color:white;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+	.home{
+
+		display: flex;
+		flex-direction: column;
+		max-height: 100%;
+		align-items: center;
+		
+		img{
+			margin: auto;
+			max-width: 100%;
+		}
+		
+		div{
+			max-width: 250px;
+			margin: 10px;
+		}
+	}
+}
+
+/* *****************What We Do*************** */
+
+.whatWeDo{
+	display: flex;
+	justify-content:center;
+	margin: 50px 0;
+	text-align: center;
+
+
+	div{
+		margin: auto;
+		max-width: 80%;
+		
+		h2{
+
+			font-size: 40px;
+			text-transform: uppercase;
+			color: #f85452;
+		}
+		
+		p{
+			margin: 0;
+			line-height: 2em;
+		
+		}
+	}
+}
+
+/* ************End What We Do**************** */
+
+/* ***********Facility Photo******************** */
+
+.facilityImage{
+
+
+
+	.facImg{
+		max-height: 300px;
+		object-fit:cover;
+	}
+}
+
+
+
+/* ***********End Facility Photo**************** */

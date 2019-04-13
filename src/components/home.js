@@ -35,7 +35,7 @@ const HomePage = () => (
     }) => (
       <>
       <div class= "home">
-       <img src={url} />
+       <img class='img'src={url} />
        <div>
       <h1 id="bigT">Current Focus Project</h1>
         <h2>{title}</h2>

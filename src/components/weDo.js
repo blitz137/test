@@ -1,22 +1,20 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby";
 
-const Test = () => (
+
+const WhatWeDo = () => (
+
 
  <StaticQuery
     query={graphql`
-      query Test {
-        contentfulHomePage(contentful_id:{eq:"3cByvheRf2sP4asouTddqS"}){
+      query What {
+        contentfulHomePage(contentful_id:{eq:"3uJHiIA5LutoxzeTT3dsJm"}){
       
         title,
          content {
             content
           }
-          image {
-            file {
-              url
-            }
-          }
+         
           
         }
         
@@ -30,10 +28,7 @@ const Test = () => (
        contentfulHomePage:{
       
         title,
-         content: { content },
-        image: {
-          file: { url }
-        }
+         content: { content }
       }
         }
         
@@ -41,18 +36,16 @@ const Test = () => (
   
    ) => (
       <>
-         <div class= "home">
-       <img class='img' src={url} />
+         <div class= "whatWeDo">
+     
        <div>
-      <h1 id="bigT">Second Focus Project</h1>
+      
         <h2>{title}</h2>
               
        
         <p>{content}</p>
 
-        <div class="but">
-        <button>Donate</button><button>Volunteer</button>
-        </div>
+       
 
         </div>
         </div>       
@@ -62,4 +55,4 @@ const Test = () => (
 
 );
 
-export default Test;
+export default WhatWeDo;

@@ -2,19 +2,24 @@ import React from "react";
 import Test from '../components/test'
 import { Helmet } from "react-helmet"
 import Home from '../components/home'
+import Layout from "../components/layout"
+import What from "../components/weDo"
+import Facility from "../components/facilityImage"
+
 
 export default () => (
+    <Layout> 
   <div>
+ <Facility/>
+ <What/>
 
     <h1 id='ourP'>Our Programs</h1>
    <Home/>
   <Test/>
 
-    <h1>Test for Dream Center</h1>
-    <p>
-     The purple border indicates a component with content pulled from contentful.
-    </p>
+    
   </div>
+   </Layout>
 )
 
 class Application extends React.Component {
