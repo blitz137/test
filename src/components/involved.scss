@@ -3,8 +3,9 @@
  but I couldn't figure out how to have two. So they are imgs for now.*/
 .getInvolved {
 	margin: auto;
-	position: relative;
+
 	margin-bottom: 150px!important;
+
 	
 	.watercolor {
 		width: 100%;
@@ -12,19 +13,21 @@
 		transform: rotate(180deg);
 		position: absolute;
 		z-index: -1;
-		top: calc(50% - 150px);
-		
+		margin-top: 50px;
+			
 		&:nth-of-type(2) {
-			top: calc(50% + 100px);
+			margin-top: 350px;
 		}
 	}
 
 	#involveTitle {
 		text-align: center;
 		color: $main-red;
+		margin-bottom: 100px;
 	}
 
-	.rowContainer {
+	.rowContainer {	
+		position: relative;
 		max-width: 1080px;
 		margin: auto;
 		display: flex;

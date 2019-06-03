@@ -7,6 +7,8 @@ import Facility from "../components/facilityImage"
 import Quotes from "../components/testimonies"
 import Involved from "../components/involved"
 
+import "../components/main.scss"
+
 export default () => (
   <Layout> 
     <div>

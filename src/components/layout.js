@@ -1,25 +1,10 @@
 import React from "react";
 import Logo from "../components/logo";
 import { Link } from "gatsby"
-
+import Header from "../components/header";
 export default ({ children }) => (
   <div className="layout">
-    <nav>
-      <div className="logo">
-        <Logo />
-      </div>
-      <div className="nav">
-        <Link id='link'to="/">Home</Link>
-        <Link id='link'to="/">About</Link>
-        <Link id='link'to="/">Support</Link>
-        <Link id='link'to="/">Contact US</Link>
-        <Link id='link'to="/">Client Application</Link>
-        <Link id="donate" to="/">
-          Donate!
-        </Link>
-      </div>
-    </nav>
-    <div className="redBanner" />
+   <Header/>
 
     {children}
     <footer>

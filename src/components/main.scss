@@ -1,0 +1,45 @@
+@import 'layout.scss';
+
+body {
+	background-color: $white;
+	font-family: $body-font, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	a {
+		display: block;
+		font-weight: 600;
+		color: $dark-gray;
+		&:hover {
+			color: #010101;
+		}
+	}
+	li:last-child {
+		a {
+			color: $white;
+			background-color: $main-blue;
+		}
+		a:hover {
+			background-color: $blue-button-hover;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	a {
+		display: block;
+		font-weight: 600;
+		color: $dark-gray;
+		&:hover {
+			color: #010101;
+		}
+	}
+}
