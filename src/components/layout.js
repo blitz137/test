@@ -1,68 +1,65 @@
-import React from "react"
-import Logo from "../components/logo"
-
-
+import React from "react";
+import Logo from "../components/logo";
+import { Link } from "gatsby"
 
 export default ({ children }) => (
-  <div class="layout">
-  	<nav>
-	<div class='logo'>
-	<Logo />
-	</div>
-	<div class='nav'>
-		<a href="">Home</a>
-		<a href="">About</a>
-		<a href="">Support</a>
-		<a href="">Contact US</a>
-		<a href="">Client Application</a>
-		<a id='donate' href="">Donate!</a>
-			
-	</div>
-
-</nav>
-<div class='redBanner'></div>
+  <div className="layout">
+    <nav>
+      <div className="logo">
+        <Logo />
+      </div>
+      <div className="nav">
+        <Link id='link'to="/">Home</Link>
+        <Link id='link'to="/">About</Link>
+        <Link id='link'to="/">Support</Link>
+        <Link id='link'to="/">Contact US</Link>
+        <Link id='link'to="/">Client Application</Link>
+        <Link id="donate" to="/">
+          Donate!
+        </Link>
+      </div>
+    </nav>
+    <div className="redBanner" />
 
     {children}
     <footer>
-    <div>
-	<div>
-		<img src=""/>
-		<div>
-			<p>3890FM3514</p>
-			<p>Beaumont, TX 77705</p>
-			<p>info@dreamcentersetx.org</p>
-			<p>(409) 234-5255</p>
-		</div>
-		<div>
-			<h3>STAY CONNECTED</h3>
-			<div>
-				<p>social media icons</p>
-			</div>
-		</div>
+      <div>
+        <div>
+          <img src="" alt=""/>
+          <div>
+            <p>3890FM3514</p>
+            <p>Beaumont, TX 77705</p>
+            <p>info@dreamcentersetx.org</p>
+            <p>(409) 234-5255</p>
+          </div>
+          <div>
+            <h3>STAY CONNECTED</h3>
+            <div>
+              <p>social media icons</p>
+            </div>
+          </div>
+        </div>
 
-	</div>
+        <div>
+          <h3>ACTION</h3>
+          <Link id='link'to="/">Donate</Link>
+          <Link id='link'to="/">Fundraise</Link>
+          <Link id='link'to="/">Volunteer</Link>
+          <Link id='link'to="/">Client Application</Link> 
+        </div>
 
-<div>
-	<h3>ACTION</h3>
-<a href="">Donate</a>	
-<a href="">Fundraise</a>		
-<a href="">Volunteer</a>	
-<a href="">Client Application</a>	
-</div>
+        <div>
+          <h3>INFO</h3>
+          <Link id='link'to="/">Our Story</Link>
+          <Link id='link'to="/">Programs</Link>
+          <Link id='link'to="/">Testimonials & Updates</Link>
+          <Link id='link'to="/">Event Calendar</Link>
+        </div>
 
-<div>
-	<h3>INFO</h3>
-<a href="">Our Story</a>	
-<a href="">Programs</a>		
-<a href="">Testimonials & Updates</a>	
-<a href="">Event Calendar</a>
-
-</div>
-
-<div>
-	<h3>Newsletter</h3>
-</div>
-</div>
-</footer>
+        <div>
+          <h3>Newsletter</h3>
+        </div>
+      </div>
+    </footer>
   </div>
-)
+);

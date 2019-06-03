@@ -1,58 +1,62 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby";
+import React from "react";
+import { StaticQuery} from "gatsby";
+import PropTypes from "prop-types";
 
-
-const HomePage = () => (
-
- <StaticQuery
-    query={graphql`
-      query HomePage {
-     
-         contentfulHomePage(contentful_id:{eq:"1dIA49AE5EQNGmSJrfRkpV"}){
-          title
-          date
-          content {
-            content
+const HomePage = ({idNumber}) => (
+  <StaticQuery
+    query={ 
+      graphql`
+      query {
+        ones: allContentfulHomePage(
+          filter: {
+            contentful_id: {
+              in: ["1dIA49AE5EQNGmSJrfRkpV", "3cByvheRf2sP4asouTddqS"]
+            }
           }
-          image {
-            file {
-              url
+        ) {
+          edges {
+            node {
+              title
+              content {
+                content
+              }
+              image {
+                file {
+                 url
+                }
+              }
             }
           }
         }
       }
-    `}
-    render={({
-        
-      contentfulHomePage: {
-        title,
-        date,
-        content: { content },
-        image: {
-          file: { url }
-        }
-      }
-    }) => (
+    `
+  }
+    render={data => (
       <>
-      <div class= "home">
-       <img class='img'src={url} />
-       <div>
-      <h1 id="bigT">Current Focus Project</h1>
-        <h2>{title}</h2>
-              
-       
-        <p>{content}</p>
+        <div className="home">
+          <img className="img" src={data.ones.edges[idNumber].node.image.file.url} alt={data.ones.edges[idNumber].node.image.file.url}/>
+          <div>
+            <h1 id="bigT">Current Focus Project</h1>
+            <h2>{data.ones.edges[idNumber].node.title}</h2>
 
-        <div class="but">
-        <button>Donate</button><button>Volunteer</button>
-        </div>
+            <p>{data.ones.edges[idNumber].node.content.content}</p>
+          
 
-        </div>
+            <div className="but">
+              <button>Donate</button>
+              <button>Volunteer</button>
+            </div>
+          </div>
         </div>
       </>
     )}
   />
-
 );
 
+HomePage.propTypes = {
+  idNumber: PropTypes.number,
+}
+HomePage.defaultProps = {
+  idNumber: ``,
+}
 export default HomePage;

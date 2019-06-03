@@ -1,0 +1,78 @@
+@import 'variables.scss';
+
+.homeQuotes {
+ 
+  margin: 50px 10% !important;
+
+  div { 
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+  }
+.myLink{
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+   #link {
+    background: $secondary-green;
+    color: white;
+    padding: 5px;
+    float: right;
+    text-decoration: none;
+    font-weight: 600; 
+  }
+}
+ 
+ 
+  .quoteBox {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 45%;
+    background: #fff;
+    background-clip: padding-box;
+    border: solid 3px transparent;
+    font-weight: 600;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; 
+      right: 0; 
+      bottom: 0; 
+      left: 0;
+      z-index: -1;
+      margin: -3px;
+      background: linear-gradient(to right, #2ac8c2, #32b0dd);
+    }
+
+    div {
+      height: 100%;
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .homeQuotes {
+    
+    .quoteBox {
+      width: 75%;
+    }
+    
+    div {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .myLink{
+      margin: auto;
+      width: 75%;
+      align-items:flex-end;
+    }
+  }
+}

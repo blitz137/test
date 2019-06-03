@@ -1,0 +1,70 @@
+@import 'variables.scss';
+/* I know you it'd be better to have the watercolors as a background,
+ but I couldn't figure out how to have two. So they are imgs for now.*/
+.getInvolved {
+	margin: auto;
+	position: relative;
+	margin-bottom: 150px!important;
+	
+	.watercolor {
+		width: 100%;
+		max-width: 1080px;
+		transform: rotate(180deg);
+		position: absolute;
+		z-index: -1;
+		top: calc(50% - 150px);
+		
+		&:nth-of-type(2) {
+			top: calc(50% + 100px);
+		}
+	}
+
+	#involveTitle {
+		text-align: center;
+		color: $main-red;
+	}
+
+	.rowContainer {
+		max-width: 1080px;
+		margin: auto;
+		display: flex;
+		flex-direction:row;
+		
+		
+		div {
+			width: 33.33%;
+			text-align: center;
+			flex-direction: column;
+			a {
+				text-decoration: none;
+				color: black;
+				&#pic{
+					height:100%;
+				}		
+				img {
+					width: 100%;
+					max-width: 100%;
+					height:100%;
+				}
+			}
+		}
+	}
+	.myLink{
+
+	  width: 100%;
+	  display: flex;
+	  justify-content:flex-end;
+	  margin: 10px 0;
+	  flex-direction:row;
+	   #link {
+	    background: $secondary-green;
+	    color: white;
+	    padding: 5px;
+	    float: right;
+	    text-decoration: none;
+	    font-weight: 600; 
+	    margin-right: 100px;
+	  }
+	}
+	
+}

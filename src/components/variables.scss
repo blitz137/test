@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+// color variables
+
+$white: #fff;
+$main-blue: #27b1e6;
+$main-green: #1be3ae;
+$main-red: #fd5450;
+
+$secondary-green: #03ab9d;
+$dark-gray: #525252;
+
+$blue-button-hover: mix($main-blue, $secondary-green, 50%);
+
+// font variables
+
+$body-font: 'Open Sans';
+
+// sizing variables
+
+$max-width: 1080px;

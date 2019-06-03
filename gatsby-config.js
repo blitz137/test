@@ -11,12 +11,13 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+  
   `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `data`,
         path: `${__dirname}/src/images`,
       },
     },
@@ -44,6 +45,7 @@ module.exports = {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   }
 },
+
 
 
   ],

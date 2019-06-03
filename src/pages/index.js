@@ -1,25 +1,33 @@
 import React from "react";
-import Test from '../components/test'
 import { Helmet } from "react-helmet"
 import Home from '../components/home'
 import Layout from "../components/layout"
 import What from "../components/weDo"
 import Facility from "../components/facilityImage"
-
+import Quotes from "../components/testimonies"
+import Involved from "../components/involved"
 
 export default () => (
-    <Layout> 
-  <div>
- <Facility/>
- <What/>
+  <Layout> 
+    <div>
+      
+      <Facility/>
+      <What/>
+      <div>
+      <Quotes/>
+      <div>
+      <Involved/>
+      </div>
+</div>
 
-    <h1 id='ourP'>Our Programs</h1>
-   <Home/>
-  <Test/>
 
-    
-  </div>
-   </Layout>
+      <h1 id='ourP'>Our Programs</h1>
+
+      <Home idNumber={0}/>
+      <Home idNumber={1}/>
+
+    </div>
+  </Layout>
 )
 
 class Application extends React.Component {
